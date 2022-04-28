@@ -51,19 +51,19 @@ pixel_update = f'{PIXELA_ENDPOINT}{USERNAME}/graphs/{GRAPH_ID}/{today_date.strft
 def create_graph():
     response = requests.post(
         url=graph_endpoint, json=graph_config, headers=headers)
-    print(response) 
+    print(response)
 
 
 def create_pixel():
     response = requests.post(
         url=pixel_creation, json=pixel_data, headers=headers)
     print(response.text)
-    
-    
+
+
 def update_pixel():
     response = requests.put(
         url=pixel_update, json=pixel_data_updated, headers=headers)
     print(response.text)
 
 
-update_pixel()  
+update_pixel()
